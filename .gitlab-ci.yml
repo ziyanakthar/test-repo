@@ -1,0 +1,4 @@
+build:
+  script:
+    - git clone https://github.com/oracle/learning-library.git
+    - git status
