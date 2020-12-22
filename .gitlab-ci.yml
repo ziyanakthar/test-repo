@@ -1,3 +1,6 @@
+variables:
+    https_proxy: www-proxy-ash7.us.oracle.com:80
+    no_proxy: .oraclecorp.com
 build:
   script:
     - git clone https://github.com/oracle/learning-library.git
