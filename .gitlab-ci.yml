@@ -9,5 +9,8 @@ build:
     - git config --global user.name "Ziyan Akthar"
     - git config --global push.default simple
     - git remote add luna-test https://gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com/luna-labs/docs/test-remote.git
+    - cp -pr learning-library/oci-library/oci-hol/deploying-jenkins learning-library/oci-library/oci-hol/oci-private-dns learning-library/oci-library/oci-hol/auditing-in-autonomous-database learning-library/oci-library/oci-hol/compute-service .
+    - rm -rf learning-library
     - git add . && git commit -m "OCI Learning Library from GitHub"
-    - git push luna-test HEAD
+    - git checkout "$CI_COMMIT_BRANCH"
+    - git push luna-test master
