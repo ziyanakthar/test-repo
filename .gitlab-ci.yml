@@ -10,4 +10,4 @@ build:
     - git config --global push.default simple
     - git remote add luna-test https://gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com/luna-labs/docs/test-remote
     - git add . && git commit -m "OCI Learning Library from GitHub"
-    - git push luna-test
+    - git push luna-test HEAD:master
