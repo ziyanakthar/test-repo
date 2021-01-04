@@ -13,4 +13,4 @@ build:
     - rm -rf learning-library
     - git add . && git commit -m "OCI Learning Library from GitHub"
     - git checkout "$CI_COMMIT_BRANCH"
-    - git push luna-test master
+    - git push luna-test
