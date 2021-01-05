@@ -8,8 +8,10 @@ build:
     - git config --global user.email "ziyan.akthar.km@oracle.com"
     - git config --global user.name "Ziyan Akthar"
     - git config --global push.default simple
-    - git remote add origin https://gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com/luna-labs/docs/test-remote.git
+    - git remote add sync-repo https://gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com/luna-labs/docs/test-remote
+    - git remote -v
+    - git fetch sync-repo
     - cp -pr learning-library/oci-library/oci-hol/deploying-jenkins learning-library/oci-library/oci-hol/oci-private-dns learning-library/oci-library/oci-hol/auditing-in-autonomous-database learning-library/oci-library/oci-hol/compute-service .
     - rm -rf learning-library
     - git add . && git commit -m "OCI Learning Library from GitHub"
-    - git push -f origin master
+    - git push sync-repo master
