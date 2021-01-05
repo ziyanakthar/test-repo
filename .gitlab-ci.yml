@@ -5,12 +5,8 @@ build:
   script:
     - git clone https://github.com/oracle/learning-library.git
     - git status
-    - git config --global user.email "doceng-alm_ww@oracle.com"
-    - git config --global user.name "DocEng Admin"
-    #- echo "https://doceng-alm_ww:EkaTombe123@gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com" > ~/.git-credentials
-    - cat ~/.git-credentials
-    - git config --system credential.helper store
-    - git config --global push.default simple
+    #- git config --global user.email "doceng-alm_ww@oracle.com"
+    #- git config --global user.name "DocEng Admin"
     - git remote add livelabs-sync https://gitlab.hap.demo.us-phoenix-1.oci.oraclecloud.com/luna-labs/docs/test-remote.git
     - git remote -v
     - cp -pr learning-library/oci-library/oci-hol/deploying-jenkins learning-library/oci-library/oci-hol/oci-private-dns learning-library/oci-library/oci-hol/auditing-in-autonomous-database learning-library/oci-library/oci-hol/compute-service .
